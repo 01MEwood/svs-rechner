@@ -10,6 +10,7 @@ export const metadata = {
     title: 'Stundenverrechnungssatz-Rechner für Schreiner',
     description: 'Vollkosten-Kalkulation nach BWA — in 3 Minuten.',
     type: 'website',
+    url: 'https://svs.marioesch.de',
   },
   other: {
     'apple-mobile-web-app-capable': 'yes',
