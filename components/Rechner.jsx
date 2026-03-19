@@ -20,23 +20,23 @@ const FONT = "-apple-system,'SF Pro Display','SF Pro Text','Helvetica Neue',syst
 
 // ─── INFO DATA ──────────────────────────────
 const INFO = {
-  rechtsform:{title:"Rechtsform & BWA",items:[{l:"Einzelunternehmen / GbR",v:"Inhaberlohn \u2260 BWA"},{l:"GmbH / UG / KG",v:"GF-Gehalt = BWA"}],hint:"Als Einzelunternehmer nimmst du Privatentnahmen (Kto. 2100) \u2014 die erscheinen NICHT im Personalaufwand deiner BWA."},
-  unternehmerlohn:{title:"Kalkulatorischer Unternehmerlohn",items:[{l:"Meistergehalt angestellt (BW)",v:"4.500\u20136.500 \u20AC/Mo"},{l:"Inkl. private KV/RV",v:"ca. 900\u20131.200 \u20AC/Mo"},{l:"Mindestansatz",v:"3.500 \u20AC/Mo"}],hint:"Was m\u00FCsste ein angestellter Meister verdienen, der deinen Job macht?"},
-  inhaberProd:{title:"Produktivanteil Inhaber",items:[{l:"Ein-Mann-Betrieb",v:"60\u201380 %"},{l:"2\u20133 Mitarbeiter",v:"40\u201360 %"},{l:"4\u20136 Mitarbeiter",v:"20\u201340 %"},{l:"7+ Mitarbeiter",v:"0\u201320 %"}],hint:"Wie viel deiner Arbeitszeit verbringst du DIREKT am Werkst\u00FCck?"},
-  personal:{title:"Personalkosten \u2014 BWA Kto. 4000\u20134199",items:[{l:"Gesellenlohn (Tarif BW)",v:"17,50\u201320,00 \u20AC/h"},{l:"Meisterlohn (angestellt)",v:"22,00\u201328,00 \u20AC/h"}],hint:"Stundenlohn wird auf Jahresgehalt hochgerechnet. Urlaub und Lohnfortzahlung sind enthalten."},
-  lohnnebenkosten:{title:"Lohnnebenkosten (AG-Anteil)",items:[{l:"Sozialversicherung",v:"ca. 21 %"},{l:"BG Holz + Umlagen",v:"ca. 7\u201311 %"},{l:"Sonderzahlungen",v:"ca. 8\u201312 %"},{l:"Gesamt typisch",v:"38\u201345 %"}],hint:"Gegenprobe: BWA Personalaufwand \u00F7 Bruttol\u00F6hne \u2212 1, dann \u00D7 100."},
-  raumkosten:{title:"Raumkosten \u2014 Kto. 4200\u20134299",items:[{l:"Werkstattmiete",v:"1.200\u20133.000 \u20AC/Mo"},{l:"Heizung/Strom/Wasser",v:"400\u2013900 \u20AC/Mo"}],hint:"Bei Eigentum: kalkulatorische Miete (Marktwert) ansetzen."},
-  maschinen:{title:"Maschinen \u2014 Kto. 4800\u20134960",items:[{l:"AfA + Wartung + Werkzeug",v:"1.500\u20133.500 \u20AC/Mo"},{l:"CNC Leasing + Wartung",v:"1.000\u20132.500 \u20AC/Mo"}],hint:"AfA + Wartung + Reparaturen + Verschlei\u00DFwerkzeug + Maschinenstrom."},
-  fahrzeuge:{title:"Fahrzeuge \u2014 Kto. 4500\u20134580",items:[{l:"Transporter komplett",v:"800\u20131.500 \u20AC/Mo"}],hint:"Leasing/AfA + Versicherung + Steuer + Kraftstoff + Wartung."},
-  versicherungen:{title:"Versicherungen \u2014 Kto. 4360\u20134390",items:[{l:"Betriebshaftpflicht + Inhalt",v:"130\u2013350 \u20AC/Mo"},{l:"IHK + HWK + Innung",v:"110\u2013310 \u20AC/Mo"}],hint:"OHNE BG \u2014 die steckt in den Lohnnebenkosten."},
-  verwaltung:{title:"Verwaltung \u2014 BWA diverse",items:[{l:"Steuerberater",v:"200\u2013500 \u20AC/Mo"},{l:"Software + IT",v:"100\u2013400 \u20AC/Mo"},{l:"Telefon + Werbung",v:"180\u2013650 \u20AC/Mo"}],hint:"BWA: \u201ESonstige betriebl. Aufwendungen\u201C minus bereits erfasste Positionen."},
-  zeit:{title:"Anwesenheitstage",items:[{l:"Arbeitstage (BW)",v:"ca. 249"},{l:"\u2212 Urlaub+Krankh.+Fortb.",v:"\u221243"},{l:"= Anwesenheitstage",v:"ca. 206"}],hint:"Gilt f\u00FCr jeden produktiven Kopf."},
-  produktivitaet:{title:"Produktivit\u00E4tsgrad Angestellte",items:[{l:"Sehr gut",v:"75\u201380 %"},{l:"Gut",v:"70\u201375 %"},{l:"Durchschnitt",v:"65\u201370 %"}],hint:"Nur Zeit am Werkst\u00FCck. Fahrt, Aufma\u00DF, Telefon = NICHT produktiv."},
-  gewinn:{title:"Gewinn- und Risikozuschlag",items:[{l:"Minimum",v:"5 %"},{l:"Solide",v:"8\u201310 %"},{l:"Investitionsf\u00E4hig",v:"10\u201315 %"}],hint:"Ohne Gewinn arbeitest du auf Selbstkosten."},
-  ergebnis:{title:"Branchenwerte Schreiner BW",items:[{l:"Existenzgef\u00E4hrdend",v:"< 55 \u20AC/h"},{l:"Unterdurchschnittlich",v:"55\u201365 \u20AC/h"},{l:"Branchendurchschnitt",v:"66\u201378 \u20AC/h"},{l:"Gut kalkuliert",v:"78\u201390 \u20AC/h"},{l:"Premium",v:"90\u2013120 \u20AC/h"}],hint:"Interner Verrechnungssatz f\u00FCr Werkstattleistung \u2014 nicht Angebotspreis."},
+  rechtsform:{title:"Rechtsform & BWA",items:[{l:"Einzelunternehmen / GbR",v:"Inhaberlohn ≠ BWA"},{l:"GmbH / UG / KG",v:"GF-Gehalt = BWA"}],hint:"Als Einzelunternehmer nimmst du Privatentnahmen (Kto. 2100) — die erscheinen NICHT im Personalaufwand deiner BWA."},
+  unternehmerlohn:{title:"Kalkulatorischer Unternehmerlohn",items:[{l:"Meistergehalt angestellt (BW)",v:"4.500–6.500 €/Mo"},{l:"Inkl. private KV/RV",v:"ca. 900–1.200 €/Mo"},{l:"Mindestansatz",v:"3.500 €/Mo"}],hint:"Was müsste ein angestellter Meister verdienen, der deinen Job macht?"},
+  inhaberProd:{title:"Produktivanteil Inhaber",items:[{l:"Ein-Mann-Betrieb",v:"60–80 %"},{l:"2–3 Mitarbeiter",v:"40–60 %"},{l:"4–6 Mitarbeiter",v:"20–40 %"},{l:"7+ Mitarbeiter",v:"0–20 %"}],hint:"Wie viel deiner Arbeitszeit verbringst du DIREKT am Werkstück?"},
+  personal:{title:"Personalkosten — BWA Kto. 4000–4199",items:[{l:"Gesellenlohn (Tarif BW)",v:"17,50–20,00 €/h"},{l:"Meisterlohn (angestellt)",v:"22,00–28,00 €/h"}],hint:"Stundenlohn wird auf Jahresgehalt hochgerechnet. Urlaub und Lohnfortzahlung sind enthalten."},
+  lohnnebenkosten:{title:"Lohnnebenkosten (AG-Anteil)",items:[{l:"Sozialversicherung",v:"ca. 21 %"},{l:"BG Holz + Umlagen",v:"ca. 7–11 %"},{l:"Sonderzahlungen",v:"ca. 8–12 %"},{l:"Gesamt typisch",v:"38–45 %"}],hint:"Gegenprobe: BWA Personalaufwand ÷ Bruttolöhne − 1, dann × 100."},
+  raumkosten:{title:"Raumkosten — Kto. 4200–4299",items:[{l:"Werkstattmiete",v:"1.200–3.000 €/Mo"},{l:"Heizung/Strom/Wasser",v:"400–900 €/Mo"}],hint:"Bei Eigentum: kalkulatorische Miete (Marktwert) ansetzen."},
+  maschinen:{title:"Maschinen — Kto. 4800–4960",items:[{l:"AfA + Wartung + Werkzeug",v:"1.500–3.500 €/Mo"},{l:"CNC Leasing + Wartung",v:"1.000–2.500 €/Mo"}],hint:"AfA + Wartung + Reparaturen + Verschleißwerkzeug + Maschinenstrom."},
+  fahrzeuge:{title:"Fahrzeuge — Kto. 4500–4580",items:[{l:"Transporter komplett",v:"800–1.500 €/Mo"}],hint:"Leasing/AfA + Versicherung + Steuer + Kraftstoff + Wartung."},
+  versicherungen:{title:"Versicherungen — Kto. 4360–4390",items:[{l:"Betriebshaftpflicht + Inhalt",v:"130–350 €/Mo"},{l:"IHK + HWK + Innung",v:"110–310 €/Mo"}],hint:"OHNE BG — die steckt in den Lohnnebenkosten."},
+  verwaltung:{title:"Verwaltung — BWA diverse",items:[{l:"Steuerberater",v:"200–500 €/Mo"},{l:"Software + IT",v:"100–400 €/Mo"},{l:"Telefon + Werbung",v:"180–650 €/Mo"}],hint:"BWA: „Sonstige betriebl. Aufwendungen“ minus bereits erfasste Positionen."},
+  zeit:{title:"Anwesenheitstage",items:[{l:"Arbeitstage (BW)",v:"ca. 249"},{l:"− Urlaub+Krankh.+Fortb.",v:"−43"},{l:"= Anwesenheitstage",v:"ca. 206"}],hint:"Gilt für jeden produktiven Kopf."},
+  produktivitaet:{title:"Produktivitätsgrad Angestellte",items:[{l:"Sehr gut",v:"75–80 %"},{l:"Gut",v:"70–75 %"},{l:"Durchschnitt",v:"65–70 %"}],hint:"Nur Zeit am Werkstück. Fahrt, Aufmaß, Telefon = NICHT produktiv."},
+  gewinn:{title:"Gewinn- und Risikozuschlag",items:[{l:"Minimum",v:"5 %"},{l:"Solide",v:"8–10 %"},{l:"Investitionsfähig",v:"10–15 %"}],hint:"Ohne Gewinn arbeitest du auf Selbstkosten."},
+  ergebnis:{title:"Branchenwerte Schreiner BW",items:[{l:"Existenzgefährdend",v:"< 55 €/h"},{l:"Unterdurchschnittlich",v:"55–65 €/h"},{l:"Branchendurchschnitt",v:"66–78 €/h"},{l:"Gut kalkuliert",v:"78–90 €/h"},{l:"Premium",v:"90–120 €/h"}],hint:"Interner Verrechnungssatz für Werkstattleistung — nicht Angebotspreis."},
 };
 
-const STEPS = ["Start","Info","Rechtsform","L\u00F6hne","LNK","Raum","Maschinen","Fahrzeuge","Vers.","Verwaltung","Stunden","Gewinn","Ergebnis"];
+const STEPS = ["Start","Info","Rechtsform","Löhne","LNK","Raum","Maschinen","Fahrzeuge","Vers.","Verwaltung","Stunden","Gewinn","Ergebnis"];
 
 // ─── UI PRIMITIVES ──────────────────────────
 
@@ -103,7 +103,7 @@ function Btn({children,onClick,primary=false,style:s={}}){return(
 
 function NavBtns({onBack,onNext,label="Weiter",showBack=true}){return(
   <div style={{display:"flex",gap:10,marginTop:24}}>
-    {showBack&&<Btn onClick={onBack}>Zur\u00FCck</Btn>}
+    {showBack&&<Btn onClick={onBack}>Zurück</Btn>}
     <Btn onClick={onNext} primary style={{flex:showBack?1.6:1}}>{label}</Btn>
   </div>
 );}
@@ -164,13 +164,13 @@ function TotalRow({l,v,c,big}){return(
 );}
 
 function fmt(n){return Math.round(n).toLocaleString("de-DE");}
-function fmtE(n){return fmt(n)+"\u00A0\u20AC";}
+function fmtE(n){return fmt(n)+" €";}
 function fmtD(n){return n.toFixed(2).replace(".",",");}
 
 function getRating(r){
-  if(r<55)return{l:"Existenzgef\u00E4hrdend",c:C.red,bg:C.redLight,d:"Dein Stundensatz deckt nicht die Kosten."};
+  if(r<55)return{l:"Existenzgefährdend",c:C.red,bg:C.redLight,d:"Dein Stundensatz deckt nicht die Kosten."};
   if(r<66)return{l:"Unterdurchschnittlich",c:"#B45309",bg:"#FEF9EE",d:"Unter dem Branchendurchschnitt."};
-  if(r<78)return{l:"Branchendurchschnitt",c:C.orange,bg:C.orangeLight,d:"Solide Basis \u2014 mit Optimierung ist mehr drin."};
+  if(r<78)return{l:"Branchendurchschnitt",c:C.orange,bg:C.orangeLight,d:"Solide Basis — mit Optimierung ist mehr drin."};
   if(r<90)return{l:"Gut kalkuliert",c:C.green,bg:C.greenLight,d:"Professionelle Kalkulation mit Investitionsspielraum."};
   return{l:"Premium-Niveau",c:"#047857",bg:"#ECFDF5",d:"Top-Kalkulation. Spezialist mit gesunder Marge."};
 }
@@ -234,7 +234,7 @@ export default function Rechner(){
   const rtg=getRating(vSatz);
   const avgStars=stats.totalRatings>0?stats.sumStars/stats.totalRatings:0;
 
-  const shareText=`Mein Stundenverrechnungssatz: ${fmtD(vSatz)} \u20AC/h (netto)\n\nSelbstkosten: ${fmtD(skSatz)} \u20AC/h\nGewinnzuschlag: ${d.gewinn} %\nProduktive Stunden: ${fmt(prodGes)} h/Jahr\n\nBerechnet mit dem SVS-Rechner f\u00FCr Schreiner.`;
+  const shareText=`Mein Stundenverrechnungssatz: ${fmtD(vSatz)} €/h (netto)\n\nSelbstkosten: ${fmtD(skSatz)} €/h\nGewinnzuschlag: ${d.gewinn} %\nProduktive Stunden: ${fmt(prodGes)} h/Jahr\n\nBerechnet mit dem SVS-Rechner für Schreiner.`;
 
   const shareWA=()=>{trackShare("whatsapp");window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`,"_blank");setShared(true);};
   const shareMail=()=>{trackShare("email");window.open(`mailto:?subject=${encodeURIComponent("Mein Stundenverrechnungssatz")}&body=${encodeURIComponent(shareText)}`,"_blank");setShared(true);};
@@ -249,19 +249,19 @@ export default function Rechner(){
         <div style={{width:80,height:80,borderRadius:22,background:`linear-gradient(135deg,${C.orange},${C.orangeMid})`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:40,margin:"0 auto 28px",boxShadow:"0 12px 32px rgba(232,113,10,0.25)"}}>{"\u{1FA9A}"}</div>
         <h1 style={{fontSize:28,fontWeight:800,color:C.text,margin:"0 0 10px",lineHeight:1.15,letterSpacing:-0.8}}>Stundenverrechnungssatz berechnen</h1>
         <p style={{fontSize:16,color:C.textSec,margin:"0 0 6px",lineHeight:1.5}}>Vollkosten-Kalkulation nach BWA</p>
-        <p style={{fontSize:13,color:C.textTer,margin:"0 0 32px"}}>3 Minuten \u00B7 Keine Anmeldung \u00B7 Daten bleiben lokal</p>
+        <p style={{fontSize:13,color:C.textTer,margin:"0 0 32px"}}>3 Minuten · Keine Anmeldung · Daten bleiben lokal</p>
         <Btn onClick={nx} primary style={{width:"100%",maxWidth:280,padding:"17px 32px",fontSize:16,borderRadius:16}}>Jetzt berechnen</Btn>
         <p style={{fontSize:12,color:C.textTer,marginTop:20}}>Halte deine letzte BWA bereit.</p>
-        {stats.totalRatings>0&&<div style={{marginTop:28,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}><Stars rating={avgStars} size={16}/><span style={{fontSize:13,color:C.textTer}}>{avgStars.toFixed(1)} \u00B7 {stats.totalRatings} Bewertung{stats.totalRatings!==1?"en":""}</span></div>}
+        {stats.totalRatings>0&&<div style={{marginTop:28,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}><Stars rating={avgStars} size={16}/><span style={{fontSize:13,color:C.textTer}}>{avgStars.toFixed(1)} · {stats.totalRatings} Bewertung{stats.totalRatings!==1?"en":""}</span></div>}
         {stats.views>1&&<p style={{fontSize:12,color:C.textTer,marginTop:6}}>{fmt(stats.views)} Berechnungen</p>}
       </div>
     );
 
     case 1:return(
-      <Stp icon={"\u{1F4CB}"} title="Zwei Seiten einer Gleichung" sub="Kosten und produktive Kapazit\u00E4t.">
+      <Stp icon={"\u{1F4CB}"} title="Zwei Seiten einer Gleichung" sub="Kosten und produktive Kapazität.">
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:20}}>
-          <div style={{padding:14,background:C.blueLight,borderRadius:14}}><div style={{fontSize:11,fontWeight:700,color:C.blue,textTransform:"uppercase",letterSpacing:0.5,marginBottom:6}}>Z\u00E4hler</div><div style={{fontSize:12,color:C.blue,lineHeight:1.6}}>Unternehmerlohn<br/>+ L\u00F6hne & LNK<br/>+ Sachkosten<br/>+ Gewinn</div></div>
-          <div style={{padding:14,background:C.orangeLight,borderRadius:14}}><div style={{fontSize:11,fontWeight:700,color:C.orangeDark,textTransform:"uppercase",letterSpacing:0.5,marginBottom:6}}>Nenner</div><div style={{fontSize:12,color:C.orangeDark,lineHeight:1.6}}>Anwesenheitstage<br/>\u00D7 Std./Tag<br/>\u00D7 Produktivit\u00E4t<br/>\u00D7 je Kopf</div></div>
+          <div style={{padding:14,background:C.blueLight,borderRadius:14}}><div style={{fontSize:11,fontWeight:700,color:C.blue,textTransform:"uppercase",letterSpacing:0.5,marginBottom:6}}>Zähler</div><div style={{fontSize:12,color:C.blue,lineHeight:1.6}}>Unternehmerlohn<br/>+ Löhne & LNK<br/>+ Sachkosten<br/>+ Gewinn</div></div>
+          <div style={{padding:14,background:C.orangeLight,borderRadius:14}}><div style={{fontSize:11,fontWeight:700,color:C.orangeDark,textTransform:"uppercase",letterSpacing:0.5,marginBottom:6}}>Nenner</div><div style={{fontSize:12,color:C.orangeDark,lineHeight:1.6}}>Anwesenheitstage<br/>× Std./Tag<br/>× Produktivität<br/>× je Kopf</div></div>
         </div>
         <NavBtns onBack={bk} onNext={nx} showBack={false} label="Los geht's"/>
       </Stp>
@@ -270,58 +270,58 @@ export default function Rechner(){
     case 2:return(
       <Stp icon={"\u{1F3E2}"} title="Rechtsform & Unternehmerlohn" sub="Erscheint dein Gehalt in der BWA?">
         <div style={{display:"flex",gap:8,marginBottom:18}}>
-          <Tog active={d.inhaber} label="Einzelunternehmen" desc="Mein Lohn \u2260 BWA" onClick={()=>u("inhaber",true)}/>
+          <Tog active={d.inhaber} label="Einzelunternehmen" desc="Mein Lohn ≠ BWA" onClick={()=>u("inhaber",true)}/>
           <Tog active={!d.inhaber} label="GmbH / UG / KG" desc="GF-Gehalt = BWA" onClick={()=>u("inhaber",false)}/>
         </div>
         {d.inhaber?(<>
           <div style={{padding:"12px 14px",background:C.yellowLight,borderRadius:12,marginBottom:18}}><p style={{fontSize:12.5,color:"#92400E",margin:0,lineHeight:1.5}}>Privatentnahmen (Kto. 2100) erscheinen NICHT als Personalaufwand in der BWA.</p></div>
-          <Inp label="Kalkulatorischer Unternehmerlohn" sub="Was w\u00FCrde ein angestellter Meister verdienen?" value={d.unternehmerlohn} onChange={v=>u("unternehmerlohn",v)} unit="\u20AC/Mo" min={2000} max={10000} step={100} info="unternehmerlohn" setModal={setModal}/>
-          <Inp label="Dein Produktivanteil" sub="Wie viel deiner Zeit bist du DIREKT am Werkst\u00FCck?" value={d.inhaberProd} onChange={v=>u("inhaberProd",v)} unit="%" min={0} max={100} step={5} info="inhaberProd" setModal={setModal}/>
+          <Inp label="Kalkulatorischer Unternehmerlohn" sub="Was würde ein angestellter Meister verdienen?" value={d.unternehmerlohn} onChange={v=>u("unternehmerlohn",v)} unit="€/Mo" min={2000} max={10000} step={100} info="unternehmerlohn" setModal={setModal}/>
+          <Inp label="Dein Produktivanteil" sub="Wie viel deiner Zeit bist du DIREKT am Werkstück?" value={d.inhaberProd} onChange={v=>u("inhaberProd",v)} unit="%" min={0} max={100} step={5} info="inhaberProd" setModal={setModal}/>
           <Calc rows={[{l:"Unternehmerlohn/Jahr",v:fmtE(ulJ)},{l:`Produktivanteil ${d.inhaberProd} %`,v:`${fmt(prodInhaber)} h/Jahr`}]}/>
-        </>):(<div style={{padding:"14px 16px",background:C.blueLight,borderRadius:12}}><p style={{fontSize:13,color:C.blue,margin:0,lineHeight:1.5}}>GF-Gehalt steht in der BWA (Kto. 4110). Z\u00E4hle dich als Mitarbeiter mit.</p></div>)}
+        </>):(<div style={{padding:"14px 16px",background:C.blueLight,borderRadius:12}}><p style={{fontSize:13,color:C.blue,margin:0,lineHeight:1.5}}>GF-Gehalt steht in der BWA (Kto. 4110). Zähle dich als Mitarbeiter mit.</p></div>)}
         <NavBtns onBack={bk} onNext={nx}/>
       </Stp>
     );
 
     case 3:return(
-      <Stp icon={"\u{1F477}"} title="Produktivl\u00F6hne" sub={d.inhaber?"Angestellte \u2014 OHNE dich.":"Alle Mitarbeiter inkl. dir."}>
-        <Inp label={d.inhaber?"Produktive Angestellte":"Produktive Mitarbeiter"} value={d.ma} onChange={v=>u("ma",v)} min={d.inhaber?0:1} max={25} info="personal" setModal={setModal} bwa="K\u00F6pfe auf Fertigungslohn"/>
+      <Stp icon={"\u{1F477}"} title="Produktivlöhne" sub={d.inhaber?"Angestellte — OHNE dich.":"Alle Mitarbeiter inkl. dir."}>
+        <Inp label={d.inhaber?"Produktive Angestellte":"Produktive Mitarbeiter"} value={d.ma} onChange={v=>u("ma",v)} min={d.inhaber?0:1} max={25} info="personal" setModal={setModal} bwa="Köpfe auf Fertigungslohn"/>
         {d.ma>0&&(<>
-          <Inp label="Durchschn. Brutto-Stundenlohn" value={d.lohn} onChange={v=>u("lohn",v)} unit="\u20AC/h" min={12} max={40} info="personal" setModal={setModal} bwa="Kto. 4110 \u00F7 Stunden"/>
+          <Inp label="Durchschn. Brutto-Stundenlohn" value={d.lohn} onChange={v=>u("lohn",v)} unit="€/h" min={12} max={40} info="personal" setModal={setModal} bwa="Kto. 4110 ÷ Stunden"/>
           <Inp label="Wochenarbeitszeit" value={d.wochenStd} onChange={v=>u("wochenStd",v)} unit="h/Wo" min={20} max={48} setModal={setModal}/>
-          <Calc rows={[{l:`${d.ma} MA \u00D7 ${fmtE(jGehalt)}/Jahr`,v:fmtE(bruttoJ)}]} total={{l:"Bruttol\u00F6hne/Jahr",v:fmtE(bruttoJ)}}/>
+          <Calc rows={[{l:`${d.ma} MA × ${fmtE(jGehalt)}/Jahr`,v:fmtE(bruttoJ)}]} total={{l:"Bruttolöhne/Jahr",v:fmtE(bruttoJ)}}/>
         </>)}
         <NavBtns onBack={bk} onNext={nx}/>
       </Stp>
     );
 
     case 4:return(
-      <Stp icon={"\u{1F4B0}"} title="Lohnnebenkosten" sub={d.ma>0?"AG-Anteil auf Bruttol\u00F6hne.":"Keine Angestellten."}>
-        {d.ma>0&&<Inp label="LNK-Aufschlag" sub="SV + BG + Umlagen + Sonderzahlungen" value={d.lnk} onChange={v=>u("lnk",v)} unit="%" min={20} max={60} info="lohnnebenkosten" setModal={setModal} bwa="(Kto. 4000\u20134199 \u2212 4110) \u00F7 4110 \u00D7 100"/>}
-        <Calc rows={[...(d.ma>0?[{l:"Bruttol\u00F6hne",v:fmtE(bruttoJ)},{l:`+ LNK ${d.lnk} %`,v:fmtE(lnkJ)}]:[]),...(d.inhaber?[{l:"+ Unternehmerlohn",v:fmtE(ulJ)}]:[])]} total={{l:"Personalkosten/Jahr",v:fmtE(persGes)}}/>
+      <Stp icon={"\u{1F4B0}"} title="Lohnnebenkosten" sub={d.ma>0?"AG-Anteil auf Bruttolöhne.":"Keine Angestellten."}>
+        {d.ma>0&&<Inp label="LNK-Aufschlag" sub="SV + BG + Umlagen + Sonderzahlungen" value={d.lnk} onChange={v=>u("lnk",v)} unit="%" min={20} max={60} info="lohnnebenkosten" setModal={setModal} bwa="(Kto. 4000–4199 − 4110) ÷ 4110 × 100"/>}
+        <Calc rows={[...(d.ma>0?[{l:"Bruttolöhne",v:fmtE(bruttoJ)},{l:`+ LNK ${d.lnk} %`,v:fmtE(lnkJ)}]:[]),...(d.inhaber?[{l:"+ Unternehmerlohn",v:fmtE(ulJ)}]:[])]} total={{l:"Personalkosten/Jahr",v:fmtE(persGes)}}/>
         <NavBtns onBack={bk} onNext={nx}/>
       </Stp>
     );
 
-    case 5:return(<Stp icon={"\u{1F3E0}"} title="Raumkosten" sub="Werkstatt, B\u00FCro, Lager."><Inp label="Raumkosten pro Monat" sub="Miete + NK + Strom + Heizung" value={d.raum} onChange={v=>u("raum",v)} unit="\u20AC" min={0} max={10000} step={50} info="raumkosten" setModal={setModal} bwa="Kto. 4200\u20134299 \u00F7 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
-    case 6:return(<Stp icon={"\u2699\uFE0F"} title="Maschinen & Werkzeug" sub="AfA, Wartung, Verschlei\u00DF."><Inp label="Maschinenkosten pro Monat" value={d.masch} onChange={v=>u("masch",v)} unit="\u20AC" min={0} max={15000} step={100} info="maschinen" setModal={setModal} bwa="(Kto. 4800+4900+4980) \u00F7 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
-    case 7:return(<Stp icon={"\u{1F690}"} title="Fahrzeugkosten"><Inp label="Fahrzeugkosten pro Monat" value={d.fzg} onChange={v=>u("fzg",v)} unit="\u20AC" min={0} max={8000} step={50} info="fahrzeuge" setModal={setModal} bwa="Kto. 4500\u20134580 \u00F7 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
-    case 8:return(<Stp icon={"\u{1F6E1}\uFE0F"} title="Versicherungen & Beitr\u00E4ge" sub="OHNE BG."><Inp label="Versicherungen pro Monat" value={d.vers} onChange={v=>u("vers",v)} unit="\u20AC" min={0} max={3000} step={25} info="versicherungen" setModal={setModal} bwa="Kto. 4360\u20134390 \u00F7 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
+    case 5:return(<Stp icon={"\u{1F3E0}"} title="Raumkosten" sub="Werkstatt, Büro, Lager."><Inp label="Raumkosten pro Monat" sub="Miete + NK + Strom + Heizung" value={d.raum} onChange={v=>u("raum",v)} unit="€" min={0} max={10000} step={50} info="raumkosten" setModal={setModal} bwa="Kto. 4200–4299 ÷ 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
+    case 6:return(<Stp icon={"\u2699\uFE0F"} title="Maschinen & Werkzeug" sub="AfA, Wartung, Verschleiß."><Inp label="Maschinenkosten pro Monat" value={d.masch} onChange={v=>u("masch",v)} unit="€" min={0} max={15000} step={100} info="maschinen" setModal={setModal} bwa="(Kto. 4800+4900+4980) ÷ 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
+    case 7:return(<Stp icon={"\u{1F690}"} title="Fahrzeugkosten"><Inp label="Fahrzeugkosten pro Monat" value={d.fzg} onChange={v=>u("fzg",v)} unit="€" min={0} max={8000} step={50} info="fahrzeuge" setModal={setModal} bwa="Kto. 4500–4580 ÷ 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
+    case 8:return(<Stp icon={"\u{1F6E1}\uFE0F"} title="Versicherungen & Beiträge" sub="OHNE BG."><Inp label="Versicherungen pro Monat" value={d.vers} onChange={v=>u("vers",v)} unit="€" min={0} max={3000} step={25} info="versicherungen" setModal={setModal} bwa="Kto. 4360–4390 ÷ 12"/><NavBtns onBack={bk} onNext={nx}/></Stp>);
 
     case 9:return(
       <Stp icon={"\u{1F5A5}\uFE0F"} title="Verwaltung & Vertrieb">
-        <Inp label="Verwaltung pro Monat" value={d.verw} onChange={v=>u("verw",v)} unit="\u20AC" min={0} max={5000} step={50} info="verwaltung" setModal={setModal} bwa="Sonst. betriebl. Aufwand"/>
-        <Calc rows={[{l:"Raum",v:`${fmt(d.raum)} \u20AC`},{l:"Maschinen",v:`${fmt(d.masch)} \u20AC`},{l:"Fahrzeuge",v:`${fmt(d.fzg)} \u20AC`},{l:"Vers.",v:`${fmt(d.vers)} \u20AC`},{l:"Verwaltung",v:`${fmt(d.verw)} \u20AC`}]} total={{l:"Sachkosten/Jahr",v:fmtE(sachJ)}}/>
+        <Inp label="Verwaltung pro Monat" value={d.verw} onChange={v=>u("verw",v)} unit="€" min={0} max={5000} step={50} info="verwaltung" setModal={setModal} bwa="Sonst. betriebl. Aufwand"/>
+        <Calc rows={[{l:"Raum",v:`${fmt(d.raum)} €`},{l:"Maschinen",v:`${fmt(d.masch)} €`},{l:"Fahrzeuge",v:`${fmt(d.fzg)} €`},{l:"Vers.",v:`${fmt(d.vers)} €`},{l:"Verwaltung",v:`${fmt(d.verw)} €`}]} total={{l:"Sachkosten/Jahr",v:fmtE(sachJ)}}/>
         <NavBtns onBack={bk} onNext={nx}/>
       </Stp>
     );
 
     case 10:return(
       <Stp icon={"\u23F1\uFE0F"} title="Produktive Stunden" sub="Der Nenner deiner Kalkulation.">
-        <Inp label="Anwesenheitstage/Jahr" sub="365 \u2212 WE \u2212 Feiertage \u2212 Urlaub \u2212 Krankheit = ca. 206" value={d.tage} onChange={v=>u("tage",v)} min={150} max={260} info="zeit" setModal={setModal}/>
+        <Inp label="Anwesenheitstage/Jahr" sub="365 − WE − Feiertage − Urlaub − Krankheit = ca. 206" value={d.tage} onChange={v=>u("tage",v)} min={150} max={260} info="zeit" setModal={setModal}/>
         <Inp label="Stunden pro Tag" value={d.std} onChange={v=>u("std",v)} unit="h" min={4} max={12} setModal={setModal}/>
-        <Inp label="Produktivit\u00E4t Angestellte" sub="Direkt am Werkst\u00FCck. 65\u201375 % realistisch." value={d.prod} onChange={v=>u("prod",v)} unit="%" min={50} max={100} step={5} info="produktivitaet" setModal={setModal}/>
-        <Calc rows={[...(d.ma>0?[{l:`${d.ma} Angest. \u00D7 ${d.prod} %`,v:`${fmt(prodAngest)} h`}]:[]),...(d.inhaber?[{l:`Inhaber \u00D7 ${d.inhaberProd} %`,v:`${fmt(prodInhaber)} h`}]:[])]} total={{l:"Prod. Stunden/Jahr",v:`${fmt(prodGes)} h`}}/>
+        <Inp label="Produktivität Angestellte" sub="Direkt am Werkstück. 65–75 % realistisch." value={d.prod} onChange={v=>u("prod",v)} unit="%" min={50} max={100} step={5} info="produktivitaet" setModal={setModal}/>
+        <Calc rows={[...(d.ma>0?[{l:`${d.ma} Angest. × ${d.prod} %`,v:`${fmt(prodAngest)} h`}]:[]),...(d.inhaber?[{l:`Inhaber × ${d.inhaberProd} %`,v:`${fmt(prodInhaber)} h`}]:[])]} total={{l:"Prod. Stunden/Jahr",v:`${fmt(prodGes)} h`}}/>
         <NavBtns onBack={bk} onNext={nx}/>
       </Stp>
     );
@@ -330,7 +330,7 @@ export default function Rechner(){
       <Stp icon={"\u{1F4B0}"} title="Gewinn- und Risikozuschlag">
         <Inp label="Gewinnzuschlag" sub="5 % = Minimum. 10 % = solide." value={d.gewinn} onChange={v=>u("gewinn",v)} unit="%" min={0} max={25} info="gewinn" setModal={setModal}/>
         <Calc rows={[{l:"Personalkosten",v:fmtE(persGes)},{l:"Sachkosten",v:fmtE(sachJ)},{l:"Selbstkosten",v:fmtE(selbstk)},{l:`+ Gewinn ${d.gewinn} %`,v:fmtE(gewinnB)}]} total={{l:"Gesamt inkl. Gewinn",v:fmtE(gesamt)}}/>
-        <div style={{padding:"12px 14px",background:C.orangeLight,borderRadius:12,marginTop:8}}><p style={{fontSize:13,color:C.orangeDark,margin:0,fontWeight:600}}>{fmtE(gesamt)} \u00F7 {fmt(prodGes)} h = {fmtD(vSatz)} \u20AC/h</p></div>
+        <div style={{padding:"12px 14px",background:C.orangeLight,borderRadius:12,marginTop:8}}><p style={{fontSize:13,color:C.orangeDark,margin:0,fontWeight:600}}>{fmtE(gesamt)} ÷ {fmt(prodGes)} h = {fmtD(vSatz)} €/h</p></div>
         <NavBtns onBack={bk} onNext={nx} label="Ergebnis anzeigen"/>
       </Stp>
     );
@@ -340,10 +340,10 @@ export default function Rechner(){
       <div style={{animation:"slideIn .35s cubic-bezier(.32,.72,0,1)"}}>
         <div style={{background:C.card,borderRadius:24,padding:"32px 24px 28px",boxShadow:"0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.04)",border:`1px solid ${C.border}`,textAlign:"center",marginBottom:16}}>
           <p style={{fontSize:13,color:C.textTer,margin:"0 0 8px",textTransform:"uppercase",letterSpacing:1,fontWeight:500}}>Stundenverrechnungssatz (netto)</p>
-          <div style={{fontSize:56,fontWeight:800,color:rtg.c,lineHeight:1,margin:"0 0 12px",letterSpacing:-2}}>{fmtD(vSatz)}<span style={{fontSize:28,letterSpacing:0}}> \u20AC</span></div>
+          <div style={{fontSize:56,fontWeight:800,color:rtg.c,lineHeight:1,margin:"0 0 12px",letterSpacing:-2}}>{fmtD(vSatz)}<span style={{fontSize:28,letterSpacing:0}}> €</span></div>
           <div style={{display:"inline-flex",alignItems:"center",gap:6,padding:"7px 18px",borderRadius:24,background:rtg.bg,color:rtg.c,fontSize:14,fontWeight:600}}>{rtg.l}</div>
           <p style={{fontSize:14,color:C.textSec,margin:"16px 0 0",lineHeight:1.5}}>{rtg.d}</p>
-          <div style={{marginTop:12,fontSize:13,color:C.textTer}}>Selbstkosten {fmtD(skSatz)} \u20AC/h + Gewinn {fmtD(vSatz-skSatz)} \u20AC/h</div>
+          <div style={{marginTop:12,fontSize:13,color:C.textTer}}>Selbstkosten {fmtD(skSatz)} €/h + Gewinn {fmtD(vSatz-skSatz)} €/h</div>
         </div>
 
         {/* Branchenvergleich */}
@@ -353,29 +353,29 @@ export default function Rechner(){
             <div style={{position:"absolute",left:"36%",width:"24%",height:"100%",background:"rgba(45,157,78,0.08)",borderLeft:`2px dashed ${C.green}`,borderRight:`2px dashed ${C.green}`}}/>
             <div style={{position:"absolute",top:"50%",transform:"translateY(-50%)",left:`${Math.min(95,Math.max(3,((vSatz-30)/100)*100))}%`,width:20,height:20,borderRadius:"50%",background:C.orange,border:"3px solid #fff",boxShadow:`0 2px 8px rgba(232,113,10,0.4)`,transition:"left .5s cubic-bezier(.32,.72,0,1)"}}/>
           </div>
-          <div style={{display:"flex",justifyContent:"space-between",marginTop:8,fontSize:11,color:C.textTer}}><span>30 \u20AC</span><span style={{color:C.green,fontWeight:600}}>66\u201390 \u20AC</span><span>130 \u20AC</span></div>
+          <div style={{display:"flex",justifyContent:"space-between",marginTop:8,fontSize:11,color:C.textTer}}><span>30 €</span><span style={{color:C.green,fontWeight:600}}>66–90 €</span><span>130 €</span></div>
         </div>
 
         {/* Kalkulation */}
         <div style={{background:C.card,borderRadius:18,padding:"20px 22px",border:`1px solid ${C.border}`,marginBottom:16}}>
           <h3 style={{fontSize:15,fontWeight:600,color:C.text,margin:"0 0 14px"}}>Kalkulation</h3>
           {d.inhaber&&<Row l="Unternehmerlohn" v={fmtE(ulJ)} c={C.purple}/>}
-          {d.ma>0&&<><Row l={`Bruttol\u00F6hne (${d.ma} MA)`} v={fmtE(bruttoJ)}/><Row l={`LNK (${d.lnk} %)`} v={fmtE(lnkJ)}/></>}
+          {d.ma>0&&<><Row l={`Bruttolöhne (${d.ma} MA)`} v={fmtE(bruttoJ)}/><Row l={`LNK (${d.lnk} %)`} v={fmtE(lnkJ)}/></>}
           <TotalRow l="Personalkosten" v={fmtE(persGes)} c={C.blue}/>
           <Row l="Raumkosten" v={fmtE(d.raum*12)}/><Row l="Maschinen" v={fmtE(d.masch*12)}/><Row l="Fahrzeuge" v={fmtE(d.fzg*12)}/><Row l="Versicherungen" v={fmtE(d.vers*12)}/><Row l="Verwaltung" v={fmtE(d.verw*12)}/>
           <TotalRow l="Selbstkosten" v={fmtE(selbstk)}/>
           <Row l={`Gewinn ${d.gewinn} %`} v={fmtE(gewinnB)} c={C.green}/>
           <TotalRow l="Gesamt" v={fmtE(gesamt)} c={C.orange} big/>
           <div style={{marginTop:14,padding:14,background:C.bg,borderRadius:14,fontSize:13,color:C.textSec,lineHeight:1.6}}>
-            {d.ma>0&&<>{d.ma} Angest.: {fmt(anwStd)} h \u00D7 {d.prod} % = {fmt(prodAngest)} h<br/></>}
-            {d.inhaber&&<>Inhaber: {fmt(anwStd)} h \u00D7 {d.inhaberProd} % = {fmt(prodInhaber)} h<br/></>}
-            <strong>{fmtE(gesamt)} \u00F7 {fmt(prodGes)} h = {fmtD(vSatz)} \u20AC/h</strong>
+            {d.ma>0&&<>{d.ma} Angest.: {fmt(anwStd)} h × {d.prod} % = {fmt(prodAngest)} h<br/></>}
+            {d.inhaber&&<>Inhaber: {fmt(anwStd)} h × {d.inhaberProd} % = {fmt(prodInhaber)} h<br/></>}
+            <strong>{fmtE(gesamt)} ÷ {fmt(prodGes)} h = {fmtD(vSatz)} €/h</strong>
           </div>
         </div>
 
         {/* Kennzahlen */}
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:16}}>
-          {(d.ma>0?[{l:"GKF",v:`${gkf.toFixed(1).replace(".",",")}\u00D7`,s:`Satz \u00F7 ${d.lohn} \u20AC`}]:[]).concat([
+          {(d.ma>0?[{l:"GKF",v:`${gkf.toFixed(1).replace(".",",")}×`,s:`Satz ÷ ${d.lohn} €`}]:[]).concat([
             {l:"Prod. Std./Jahr",v:`${fmt(prodGes)} h`},
             {l:"Kosten/Arbeitstag",v:fmtE(gesamt/d.tage/Math.max(1,d.ma+(d.inhaber?1:0)))},
             {l:"Personal-Anteil",v:`${Math.round(persAnteil)} %`,warn:persAnteil>70},
@@ -388,8 +388,8 @@ export default function Rechner(){
 
         {/* Hinweis */}
         <div style={{background:C.yellowLight,borderRadius:16,padding:"16px 18px",border:"1px solid #FDE68A",marginBottom:16}}>
-          <p style={{fontSize:13,fontWeight:600,color:"#92400E",margin:"0 0 6px"}}>Verrechnungssatz \u2260 Angebotspreis</p>
-          <p style={{fontSize:12.5,color:"#92400E",margin:0,lineHeight:1.55}}>Dieser Stundensatz deckt deine Werkstattleistung. Dein Angebotspreis enth\u00E4lt zus\u00E4tzlich Materialkosten, Sonderleistungen und 19 % MwSt.</p>
+          <p style={{fontSize:13,fontWeight:600,color:"#92400E",margin:"0 0 6px"}}>Verrechnungssatz ≠ Angebotspreis</p>
+          <p style={{fontSize:12.5,color:"#92400E",margin:0,lineHeight:1.55}}>Dieser Stundensatz deckt deine Werkstattleistung. Dein Angebotspreis enthält zusätzlich Materialkosten, Sonderleistungen und 19 % MwSt.</p>
         </div>
 
         {/* Share */}
@@ -404,14 +404,14 @@ export default function Rechner(){
 
         {/* Rating */}
         <div style={{background:C.card,borderRadius:18,padding:"24px 22px",border:`1px solid ${C.border}`,marginBottom:16,textAlign:"center"}}>
-          {!rated?(<><p style={{fontSize:15,fontWeight:600,color:C.text,margin:"0 0 14px"}}>Wie hilfreich war der Rechner?</p><StarInput value={userRating} onChange={doRate}/></>):(<p style={{fontSize:14,color:C.green,margin:0,fontWeight:500}}>Danke f\u00FCr deine Bewertung!</p>)}
-          {stats.totalRatings>0&&<div style={{marginTop:14,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}><Stars rating={avgStars} size={14}/><span style={{fontSize:12,color:C.textTer}}>{avgStars.toFixed(1)} \u00B7 {stats.totalRatings} Bewertung{stats.totalRatings!==1?"en":""}</span></div>}
+          {!rated?(<><p style={{fontSize:15,fontWeight:600,color:C.text,margin:"0 0 14px"}}>Wie hilfreich war der Rechner?</p><StarInput value={userRating} onChange={doRate}/></>):(<p style={{fontSize:14,color:C.green,margin:0,fontWeight:500}}>Danke für deine Bewertung!</p>)}
+          {stats.totalRatings>0&&<div style={{marginTop:14,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}><Stars rating={avgStars} size={14}/><span style={{fontSize:12,color:C.textTer}}>{avgStars.toFixed(1)} · {stats.totalRatings} Bewertung{stats.totalRatings!==1?"en":""}</span></div>}
           {stats.views>1&&<p style={{fontSize:11,color:C.textTer,marginTop:6}}>{fmt(stats.views)} Berechnungen</p>}
         </div>
 
         {/* Disclaimer */}
         <div style={{padding:"14px 16px",background:C.bg,borderRadius:14,marginBottom:16}}>
-          <p style={{fontSize:11,color:C.textTer,margin:0,lineHeight:1.55}}>Dieses Tool dient ausschlie\u00DFlich als Orientierungshilfe zur \u00DCberschlagsrechnung des Stundenverrechnungssatzes. Es ersetzt keine individuelle betriebswirtschaftliche Beratung durch einen Steuerberater oder Unternehmensberater. Die Berechnung basiert auf den eingegebenen Werten und vereinfachten Annahmen. F\u00FCr die Richtigkeit, Vollst\u00E4ndigkeit und Aktualit\u00E4t der Ergebnisse wird keine Haftung \u00FCbernommen. Gesch\u00E4ftliche Entscheidungen sollten stets auf einer professionellen Beratung basieren.</p>
+          <p style={{fontSize:11,color:C.textTer,margin:0,lineHeight:1.55}}>Dieses Tool dient ausschließlich als Orientierungshilfe zur Überschlagsrechnung des Stundenverrechnungssatzes. Es ersetzt keine individuelle betriebswirtschaftliche Beratung durch einen Steuerberater oder Unternehmensberater. Die Berechnung basiert auf den eingegebenen Werten und vereinfachten Annahmen. Für die Richtigkeit, Vollständigkeit und Aktualität der Ergebnisse wird keine Haftung übernommen. Geschäftliche Entscheidungen sollten stets auf einer professionellen Beratung basieren.</p>
         </div>
 
         <div style={{display:"flex",gap:10,marginBottom:8}}>
