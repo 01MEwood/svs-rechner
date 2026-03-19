@@ -234,7 +234,7 @@ export default function Rechner(){
   const rtg=getRating(vSatz);
   const avgStars=stats.totalRatings>0?stats.sumStars/stats.totalRatings:0;
 
-  const shareText=`Mein Stundenverrechnungssatz: ${fmtD(vSatz)} €/h (netto)\n\nSelbstkosten: ${fmtD(skSatz)} €/h\nGewinnzuschlag: ${d.gewinn} %\nProduktive Stunden: ${fmt(prodGes)} h/Jahr\n\nBerechnet mit dem SVS-Rechner für Schreiner.`;
+  const shareText=`Mein Stundenverrechnungssatz: ${fmtD(vSatz)} €/h (netto)\n\nSelbstkosten: ${fmtD(skSatz)} €/h\nGewinnzuschlag: ${d.gewinn} %\nProduktive Stunden: ${fmt(prodGes)} h/Jahr\n\nBerechnet mit dem SVS-Rechner für Schreiner:\nhttps://svs.marioesch.de`;
 
   const shareWA=()=>{trackShare("whatsapp");window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`,"_blank");setShared(true);};
   const shareMail=()=>{trackShare("email");window.open(`mailto:?subject=${encodeURIComponent("Mein Stundenverrechnungssatz")}&body=${encodeURIComponent(shareText)}`,"_blank");setShared(true);};
@@ -429,6 +429,10 @@ export default function Rechner(){
       {s>0&&s<12&&<Progress cur={s} tot={STEPS.length}/>}
       <div key={s}>{renderStep()}</div>
       <Modal open={!!modal} onClose={()=>setModal(null)} k={modal}/>
+      <footer style={{textAlign:"center",padding:"32px 16px 24px",borderTop:`1px solid ${C.border}`,marginTop:32}}>
+        <p style={{fontSize:12,color:C.textTer,margin:"0 0 4px",lineHeight:1.5}}>Ein Tool von <strong style={{color:C.textSec,fontWeight:600}}>Mario Esch</strong> · Schreinermeister</p>
+        <a href="mailto:mario@marioesch.de" style={{fontSize:12,color:C.orange,textDecoration:"none"}}>mario@marioesch.de</a>
+      </footer>
     </div>
   );
 }
