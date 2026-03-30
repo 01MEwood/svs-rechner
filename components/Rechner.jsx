@@ -248,12 +248,33 @@ export default function Rechner(){
       <div style={{textAlign:"center",padding:"48px 20px 32px"}}>
         <div style={{width:80,height:80,borderRadius:22,background:`linear-gradient(135deg,${C.orange},${C.orangeMid})`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:40,margin:"0 auto 28px",boxShadow:"0 12px 32px rgba(232,113,10,0.25)"}}>{"\u{1FA9A}"}</div>
         <h1 style={{fontSize:28,fontWeight:800,color:C.text,margin:"0 0 10px",lineHeight:1.15,letterSpacing:-0.8}}>Stundenverrechnungssatz berechnen</h1>
-        <p style={{fontSize:16,color:C.textSec,margin:"0 0 6px",lineHeight:1.5}}>Vollkosten-Kalkulation nach BWA</p>
-        <p style={{fontSize:13,color:C.textTer,margin:"0 0 32px"}}>3 Minuten · Keine Anmeldung · Daten bleiben lokal</p>
-        <Btn onClick={nx} primary style={{width:"100%",maxWidth:280,padding:"17px 32px",fontSize:16,borderRadius:16}}>Jetzt berechnen</Btn>
+        <p style={{fontSize:17,color:C.textSec,margin:"0 0 6px",lineHeight:1.5,fontWeight:500}}>Kostenloser Rechner für Schreiner, Tischler & Handwerker</p>
+        <p style={{fontSize:14,color:C.textSec,margin:"0 0 6px",lineHeight:1.5}}>Vollkosten-Kalkulation nach BWA mit Branchenvergleich</p>
+        <p style={{fontSize:13,color:C.textTer,margin:"0 0 28px"}}>3 Minuten · Keine Anmeldung · Daten bleiben lokal</p>
+        <Btn onClick={nx} primary style={{width:"100%",maxWidth:300,padding:"17px 32px",fontSize:16,borderRadius:16}}>Jetzt Stundensatz berechnen</Btn>
         <p style={{fontSize:12,color:C.textTer,marginTop:20}}>Halte deine letzte BWA bereit.</p>
         {stats.totalRatings>0&&<div style={{marginTop:28,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}><Stars rating={avgStars} size={16}/><span style={{fontSize:13,color:C.textTer}}>{avgStars.toFixed(1)} · {stats.totalRatings} Bewertung{stats.totalRatings!==1?"en":""}</span></div>}
-        {stats.views>1&&<p style={{fontSize:12,color:C.textTer,marginTop:6}}>{fmt(stats.views)} Berechnungen</p>}
+        {stats.views>1&&<p style={{fontSize:12,color:C.textTer,marginTop:6}}>{fmt(stats.views)} Berechnungen durchgeführt</p>}
+        <div style={{marginTop:32,padding:"16px 20px",background:C.card,borderRadius:16,border:`1px solid ${C.border}`,textAlign:"left"}}>
+          <h2 style={{fontSize:15,fontWeight:700,color:C.text,margin:"0 0 10px"}}>So funktioniert die Kalkulation</h2>
+          <p style={{fontSize:13,color:C.textSec,margin:0,lineHeight:1.65}}>
+            Dein <strong>Stundenverrechnungssatz</strong> ergibt sich aus deinen <strong>Gesamtkosten</strong> (Personal, Sachkosten, Gewinn) geteilt durch deine <strong>produktiven Stunden</strong>. Der Branchendurchschnitt für Schreiner liegt bei <strong>66–78 €/h</strong> (netto). Unter 55 €/h? Existenzgefährdend.
+          </p>
+        </div>
+        <div style={{marginTop:14,display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8}}>
+          <div style={{padding:"12px 8px",background:C.orangeLight,borderRadius:12}}>
+            <div style={{fontSize:20,fontWeight:800,color:C.orange}}>BWA</div>
+            <div style={{fontSize:11,color:C.orangeDark,marginTop:2}}>basierte Werte</div>
+          </div>
+          <div style={{padding:"12px 8px",background:C.greenLight,borderRadius:12}}>
+            <div style={{fontSize:20,fontWeight:800,color:C.green}}>GKF</div>
+            <div style={{fontSize:11,color:C.green,marginTop:2}}>Gemeinkostenfaktor</div>
+          </div>
+          <div style={{padding:"12px 8px",background:C.blueLight,borderRadius:12}}>
+            <div style={{fontSize:20,fontWeight:800,color:C.blue}}>66–90€</div>
+            <div style={{fontSize:11,color:C.blue,marginTop:2}}>Branchenwert/h</div>
+          </div>
+        </div>
       </div>
     );
 
